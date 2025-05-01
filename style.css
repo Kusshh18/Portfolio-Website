@@ -1,0 +1,211 @@
+:root {
+  --primary: #1c1c1c;
+  --accent: #f0a500;
+  --accent-hover: #cc8500;
+  --background: #121212;
+  --text-dark: #e0e0e0;
+  --text-light: #aaaaaa;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  color: var(--text-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: var(--primary);
+  color: var(--white);
+  padding: 4rem 0 2rem;
+  text-align: center;
+  animation: slideFadeIn 1.2s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 1.8rem;
+}
+
+nav a {
+  color: var(--text-dark);
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-in;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: #1f1f1f;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  font-size: 2.6rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #2a2a2a;
+  color: var(--white);
+}
+
+form button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-3px);
+}
+
+footer {
+  background: var(--primary);
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  animation: fadeIn 1s ease-in;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: var(--text-dark);
+  margin: 0 0.7rem;
+  font-size: 1.7rem;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.social-icons a:hover {
+  color: var(--accent);
+  transform: scale(1.4);
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.skills .skill {
+  background: #2a2a2a;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills .skill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.experience .job {
+  background: #2a2a2a;
+  margin: 1.5rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
